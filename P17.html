@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PC portable gamer Stealth 16 AI Studio A1VIG-208FR</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp17/1024_ca9b7bd1-b480-4289-95d6-346d2495c12f.webp" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp17/1024_ca9b7bd1-b480-4289-95d6-346d2495c12f.webp" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp17/1024_ca9b7bd1-b480-4289-95d6-346d2495c12f.webp')">
+                    <img class="thumbnail" src="/projet e comerce/imgp17/1024_acbde22d-b246-49fc-9acc-30e1ef1198aa.webp" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp17/1024_acbde22d-b246-49fc-9acc-30e1ef1198aa.webp')">
+                    <img class="thumbnail" src="/projet e comerce/imgp17/1024_a2f202e3-221b-47bd-9c20-83edad558506.webp" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp17/1024_a2f202e3-221b-47bd-9c20-83edad558506.webp')">
+                    <img class="thumbnail" src="/projet e comerce/imgp17/1024_0016cc8a-6086-4475-aeea-a9641e2f9755.webp" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp17/1024_0016cc8a-6086-4475-aeea-a9641e2f9755.webp')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>PC portable gamer Stealth 16 AI Studio A1VIG-208FR</h1>
+                <p class="description">
+                    Processeur Intel® Core™ Ultra 9 185H 
+                    Windows 11 Professionnel
+                    Carte graphique GeForce RTX™ 4090 Laptop GPU 16 Go GDDR6 (selon modèle)
+                    Carte graphique NVIDIA® GeForce RTX™ Studio Laptop (selon modèle)
+                    Mode GPU discret pour booster les performances du GPU
+                    Ajustement automatique des réglages avec MSI AI Engine
+                    Châssis en alliage de magnésium et d'aluminium
+                    Écran 16“ UHD+ (3840 x 2400), 16:10, Mini LED, 120 Hz, 100 % DCI-P3 (typique), dalle de niveau IPS (selon modèle)
+                    Écran 16" QHD+ (2560 x 1600), 16:10, 240 Hz, 100 % DCI-P3 (typique), dalle de niveau IPS (selon modèle)
+                    Un poids de 1,99 kg pour 19,95 mm d'épaisseur (estimation)
+                    Système audio Dynaudio à six haut-parleurs
+                    Webcam Full HD infrarouge avec cache
+                    Batterie d'une capacité de 99,9 Whr
+                </p>
+                <p class="price">Price: <strong>1 661,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('PC portable gamer Stealth 16 AI Studio A1VIG-208FR', '1 661,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pc Portable Gigabyte G5 KF5 / i5 13ème Gén / 16 Go / RTX 4060 8G    </title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060-2.jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060-2.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060-3.jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060-3.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060-1.jpg" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp10/pc-portable-gamer-gigabyte-g5-kf5-i5-13e-gen-16go-rtx-4060-1.jpg')">
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Pc Portable Gigabyte G5 KF5 / i5 13ème Gén / 16 Go / RTX 4060 8G</h1>
+                <p class="description">
+                    Écran 15.6" Full HD, 144Hz - Processeur: Intel Core i5-13500H (Up to 4.7 GHz Turbo max, 18 Mo de mémoire cache, 12-Cores) - Système d'exploitation: FreeDos - Mémoire RAM: 16 Go DDR5-4800 - Disque dur: 1To SSD Nvme - Carte graphique: NVIDIA GeForce RTX 4060 (8 Go de mémoire dédiée GDDR6) avec Wi-Fi, Bluetooth, 1x USB 2.0 (Type A), 1x USB 3.2 Gen 1 (Type A), 2x USB 3.2 Gen 2 (Type C), 1x HDMI™ (avec HDCP), 1x port LAN RJ-45, 1x Mini DP 1.4, 1 x prise d'entrée CC, 1x prise microphone, 1 x 2-in- 1 prise audio (casque/microphone), 1x lecteur de carte MicroSD - Clavier pleine taille éclairé multi-langues, 15 couleurs, avec pavé numérique - Couleur: Noir - Garantie: 2 ans
+                </p>
+                <p class="price">Price: <strong>3 159,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Pc Portable Gigabyte G5 KF5 / i5 13ème Gén / 16 Go / RTX 4060 8G', '3 159,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pc de Bureau Gamer LITE / Ryzen 5 4600G / Vega 7 / 16 Go</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp9/pc-de-bureau-gamer-lite-ryzen-5-4600g-vega-7-16-go.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp9/pc-de-bureau-gamer-lite-ryzen-5-4600g-vega-7-16-go.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp9/pc-de-bureau-gamer-lite-ryzen-5-4600g-vega-7-16-go.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp9/pc-de-bureau-gamer-lite-ryzen-5-4600g-vega-7-16-go (1).jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp9/pc-de-bureau-gamer-lite-ryzen-5-4600g-vega-7-16-go (1).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp9/pc-de-bureau-gamer-lite-ryzen-5-4600g-vega-7-16-go (2).jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp9/pc-de-bureau-gamer-lite-ryzen-5-4600g-vega-7-16-go (2).jpg')">
+                   
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Pc de Bureau Gamer LITE / Ryzen 5 4600G / Vega 7 / 16 Go</h1>
+                <p class="description">
+                    Boîtier Gamer REDRAGON PAKTIS 2B GC-560 M-ATX / 3 FAN ARGB / Noir - Processeur AMD Ryzen 5 4600G , (jusqu'à 4.2 GHz, 11 Mo de mémoire cache) - Mémoire 16 Go (2x 8 Go) TeamGroup Elite DDR4 / 3200 Mhz - Disque SSD 2.5" SATA 512 Go - Carte graphique AMD Radeon Vega 7 Graphics - Carte Mère Asus PRIME A520M-K - Boîte d'alimentation Redragon RGPS GC-PS021 / 500W / 80+ - Garantie 1 an
+                </p>
+                <p class="price">Price: <strong>989,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Pc de Bureau Gamer LITE / Ryzen 5 4600G / Vega 7 / 16 Go', '989,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

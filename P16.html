@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pc de Bureau Gamer BLADE / Ryzen 7 5700G / Vega 8 / 16 Go</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp16/µ.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp16/µ.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp16/µ.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp16/pc-de-bureau-gamer-mytek-amd-ryzen-7-16go-pny-geforce-rtx-4070-12g-xlr8-3.jpg" alt="Gallery 2" onclick="updateImage('imgp16/pc-de-bureau-gamer-mytek-amd-ryzen-7-16go-pny-geforce-rtx-4070-12g-xlr8-3.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp16/pc-de-bureau-gamer-mytek-amd-ryzen-7-16go-pny-geforce-rtx-4070-12g-xlr8-2.jpg" alt="Gallery 3" onclick="updateImage('imgp16/pc-de-bureau-gamer-mytek-amd-ryzen-7-16go-pny-geforce-rtx-4070-12g-xlr8-2.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp16/pc-de-bureau-gamer-mytek-amd-ryzen-7-16go-pny-geforce-rtx-4070-12g-xlr8-1.jpg" alt="Gallery 4" onclick="updateImage('imgp16/pc-de-bureau-gamer-mytek-amd-ryzen-7-16go-pny-geforce-rtx-4070-12g-xlr8-1.jpg')">
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Pc de Bureau Gamer BLADE / Ryzen 7 5700G / Vega 8 / 16 Go</h1>
+                <p class="description">
+                    Processeur: AMD Ryzen™ 7 7700X (4.5 GHz up to 5.4 GHz Turbo max, 32Mo Mémoire cache, Octa-Core) - Système d'exploitation: FreeDos - Mémoire RAM: 2 x PATRIOT VIPER STEEL 8Go DDR4 RGB - Disque Dur: MSI SPATIUM M371 SSD 1To NVME M.2 - Carte mère: ASUS PRIME B650M-A II - Carte graphique: PNY GeForce RTX 4070 12GB XLR8 Gaming VERTO EPIC-X RVB 3X - Refroidisseur CPU: MSI MAG CORELIQUID 280R - Boîtier AQIRYS PROCYON Moyen Tour 5 Fans - Noir - Alimentation MSI MAG A850GL PCIE5 - Dimensions: 620 x 240 x 530 mm - Couleur: Noir - Garantie: 1 an
+                </p>
+                <p class="price">Price: <strong>1 159,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Pc de Bureau Gamer BLADE / Ryzen 7 5700G / Vega 8 / 16 Go', '1 159,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

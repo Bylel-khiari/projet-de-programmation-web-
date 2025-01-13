@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecran Gaming COOLER MASTER GA2501 24.5'' Full HD IPS 100Hz</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp27/ecran-gaming-cooler-master-ga2501-24-5-full-hd-ips-100hz.jpg" alt="Featured Product"  >
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp27/ecran-gaming-cooler-master-ga2501-24-5-full-hd-ips-100hz.jpg" alt="Gallery 1" onclick="updateImage ('/projet e comerce/imgp27/ecran-gaming-cooler-master-ga2501-24-5-full-hd-ips-100hz.jpg')"> 
+                    <img class="thumbnail" src="/projet e comerce/imgp27/ecran-gaming-cooler-master-ga2501-24-5-full-hd-ips-100hz-3.jpg" alt="Gallery 2" onclick="updateImage ('/projet e comerce/imgp27/ecran-gaming-cooler-master-ga2501-24-5-full-hd-ips-100hz-3.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp27/ecran-gaming-cooler-master-ga2501-24-5-full-hd-ips-100hz-2.jpg" alt="Gallery 3" onclick="updateImage ('/projet e comerce/imgp27/ecran-gaming-cooler-master-ga2501-24-5-full-hd-ips-100hz-2.jpg')">
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Ecran Gaming COOLER MASTER GA2501 24.5'' Full HD IPS 100Hz</h1>
+                <p class="description">
+                    Écran Gaming COOLER MASTER GA2501 - FLAT - Taille de l'écran: 24.5 Full HD, 100 Hz - Résolution: 1920 x 1080 pixels - Format d'écran: 16:9 - Rapport de contraste: 1300:1 - Luminosité: 250 cd/m² - Temps de réponse: 1 ms (MPRT), 4 ms (GtG) - Type de dalle: IPS - Angle de vue (H / V): 178°/178° - Connecteurs: 1x HDMI 1.4, 1x VGA, 1x Sortie audio 3,5 mm - Inclinaison: -5°~+20° - Montage VESA : 100 x 100 mm - Technologie VRR: Synchronisation adaptative, Technologie Overdrive, Anti-scintillement - Couleur: Noir - Garantie: 1 an
+  
+                </p>
+                <p class="price">Price: <strong>299,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Ecran Gaming COOLER MASTER GA2501 24.5 Full HD IPS 100Hz', '299,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

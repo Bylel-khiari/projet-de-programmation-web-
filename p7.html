@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PC Portable Gamer LENOVO Légion Pro 5 16ARX8 AMD RYZEN 7 32Go RTX 4050</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050-1.jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050-1.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050-2.jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050-2.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050-5.jpg" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp7/pc-portable-gamer-lenovo-legion-pro-5-16arx8-amd-ryzen-7-32go-rtx-4050-5.jpg')">
+
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>PC Portable Gamer LENOVO Légion Pro 5 16ARX8 AMD RYZEN 7 32Go RTX 4050</h1>
+                <p class="description">
+                    Écran 16" WQXGA IPS, 240 Hz - Processeur: AMD Ryzen™ 7 7745HX (3.6 GHz up to 5.1 GHz Turbo max, 32Mo de mémoire cache, Octa-Core) - Système d'exploitation: Windows 11 Famille - Mémoire RAM: 32Go DDR5-5200 - Disque Dur: 1To SSD - Carte Graphique: NVIDIA GeForce RTX 4050 (6Go de mémoire dédiée GDDR6) avec Wi-Fi, Bluetooth, 4x USB 3.2 Gen 1, 2x USB-C 3.2 Gen 2, 1x HDMI 2.1, 1x RJ-45, 1x prise combo casque/microphone (3,5 mm),1x connecteur d'alimentation - Clavier Rétroéclairé RVB 4 zones - Couleur: Gris - Garantie: 2 ans
+                </p>
+                <p class="price">Price: <strong>4 649,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('PC Portable Gamer LENOVO Légion Pro 5 16ARX8 AMD RYZEN 7 32Go RTX 4050', '4 649,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

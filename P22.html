@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>etup Gamer Special Pc de Bureau Gaming / Ryzen 5 3400G / Vega 11 / 16 Go Avec Écran Redragon 21.5" Full HD VA 100 Hz </title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp22/setup-gamer-special-pc-de-bureau-gaming-ryzen-5-3400g-vega-11-16-go-avec-ecran-redragon-215-full-hd-va-100-hz.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp22/setup-gamer-special-pc-de-bureau-gaming-ryzen-5-3400g-vega-11-16-go-avec-ecran-redragon-215-full-hd-va-100-hz.jpg" alt="Gallery 1" onclick="updateImage ('/projet e comerce/imgp22/setup-gamer-special-pc-de-bureau-gaming-ryzen-5-3400g-vega-11-16-go-avec-ecran-redragon-215-full-hd-va-100-hz.jpg')">
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>setup Gamer Special Pc de Bureau Gaming / Ryzen 5 3400G / Vega 11 / 16 Go Avec Écran Redragon 21.5" Full HD VA 100 Hz</h1>
+                <p class="description">
+                    Écran Gaming REDRAGON THUGGA 21.5" Full HD VA / 100Hz - Boîtier Gamer Enter Razor Mid-Tower RGB + Alimentation 500W / Noir - Processeur AMD Ryzen 5 3400G, (jusqu'à 4.2 Ghz, 6 Mo de mémoire cache) - RAM 16 Go (2x 8 Go) DDR4 - Disque SSD 2.5" SATA 256 Go - Carte graphique AMD Radeon Vega 11 Graphics - Carte mère Biostar B450MHP DDR4 - Avec Ensemble Clavier Qwerty & Souris Everest Rampage KM-R77 - Garantie 1 an
+                </p>
+                <p class="price">Price: <strong>999,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('setup Gamer Special Pc de Bureau Gaming / Ryzen 5 3400G / Vega 11 / 16 Go Avec Écran Redragon 21.5 Full HD VA 100 Hz', '999,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

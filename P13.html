@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pc Portable LENOVO Gaming 3 15ACH6 / Ryzen 5 5500H / RTX 2050 4GB / 16 Go / NOIR</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11 (3).jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11 (3).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11 (1).jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11 (1).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11 (2).jpg" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp13/pc-portable-lenovo-ideapad-gaming-3-15ach6-ryzen-5-5500h-rtx-2050-4g-16-go-512-go-ssd-noir-windows-11 (2).jpg')">
+                    
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Pc Portable LENOVO Gaming 3 15ACH6 / Ryzen 5 5500H / RTX 2050 4GB / 16 Go / NOIR</h1>
+                <p class="description">
+                    Écran 15.6" Full HD (1 920 x 1 080), IPS antireflet - Processeur AMD Ryzen 5 5500H, (jusqu'à 4.2 GHz, 10 Mo de mémoire cache) - Mémoire 16 Go DDR4 - Disque SSD M.2 NVMe 512 Go - Carte graphique NVIDIA GeForce RTX 2050, 4 Go de mémoire GDDR6 dédiée - 2x Haut-parleurs Enceintes stéréo 2W - Caméra HD 720p - Clavier Rétroéclairage blanc - Wi-Fi 6 - Bluetooth 5.1 - 1x Ethernet (RJ-45) - 1x HDMI 2.0 - 1x prise combo casque/microphone (3.5 mm) - 1x USB-C 3.2 - 2x USB 3.2 - Windows 11 - Couleur Noir - Gara 
+                </p>
+                <p class="price">Price: <strong>2 149,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Pc Portable LENOVO Gaming 3 15ACH6 / Ryzen 5 5500H / RTX 2050 4GB / 16 Go / NOIR', '2 149,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>
+ 

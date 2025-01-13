@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Setup Gamer Special Pc de Bureau Gaming / Ryzen 5 4600G / Vega 7 / 16 Go Avec Écran Aero 24" Full HD IPS 120 Hz</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp23/tiny-pack-gaming-spirit-of-gamer-pro-mk5-clavier-gamer-souris-et-tapis.webp" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class = "thumbnail" src = "/projet e comerce/imgp23/tiny-pack-gaming-spirit-of-gamer-pro-mk5-clavier-gamer-souris-et-tapis.webp" alt = "Gallery 2" onclick = "updateImage ('/projet e comerce/imgp23/tiny-pack-gaming-spirit-of-gamer-pro-mk5-clavier-gamer-souris-et-tapis.webp')">
+                    <img class="thumbnail" src="/projet e comerce/imgp23/full-setup-alpha-raptor-pc-gamer-ryzen-5-5650ge-8go-500-go-ssd-ecran-asus-tuf-pack-gaming-sog.jpg" alt="Gallery 1" onclick="updateImage ('/projet e comerce/imgp23/full-setup-alpha-raptor-pc-gamer-ryzen-5-5650ge-8go-500-go-ssd-ecran-asus-tuf-pack-gaming-sog.jpg')">
+                    
+
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Setup Gamer Special Pc de Bureau Gaming / Ryzen 5 4600G / Vega 7 / 16 Go Avec Écran Aero 24" Full HD IPS 120 Hz</h1>
+                <p class="description">
+                    pc sur mesure: Processeur AMD RYZEN 5 Pro 5650GE Hexa core (3.4GHz up to 4.4GHz, 19Mo cache), Ventilateur CPU AMD Wraith Stealth, carte mère ASUS Prime A520M-K, mémoire GOODRAM 8Go DDR4, Radeon Graphics, Disque Dur SSD MSI Spatium M371 500Go, Alimentation NJOY  TITAN+ 500W 80+ BRONZE, Boitier Aqirys MIZAR.
+
+                    Garantie: 1an
+                </p>
+                <p class="price">Price: <strong>1 289,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Setup Gamer Special Pc de Bureau Gaming / Ryzen 5 4600G / Vega 7 / 16 Go Avec Écran Aero 24  Full HD IPS 120 Hz', '1 289,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GEFORCE-RTX-3060</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+             <h1> GAMING - ZONE </h1>
+        </div>
+        <ul class="menu">
+            <li><a href="project.html" class="active">Accueil</a></li>
+            <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+            <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+        </ul>
+    </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp3/1617361402051.webp" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp3/1617361402051.webp" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp3/1617361402051.webp')">
+                    <img class="thumbnail" src="/projet e comerce/imgp3/1617361410665.webp" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp3/1617361410665.webp')">
+                    <img class="thumbnail" src="/projet e comerce/imgp3/1617361419789.webp" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp3/1617361419789.webp')">
+                    <img class="thumbnail" src="/projet e comerce/imgp3/1617361430621.webp" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp3/1617361430621.webp')">
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>GEFORCE-RTX-3060</h1>
+                <p class="description">
+                    - Chipset graphique : NVIDIA GeForce RTX 3060 Ti.
+                    - Marque du GPU : NVIDIA.
+                    - Fréquence boostée : 1665 MHz.
+                    - Nombre de GPU : 1.
+                    - Bus : PCI Express 4.0 16x.
+                    -Taille mémoire vidéo : 8 GB.
+                    - Interface mémoire : 256 bit(s).
+                    - Fréquence mémoire vidéo : 14000 MHz.
+                    - Type de mémoire : GDDR6.
+                    - Support Direct X (version) : 12.
+                    - Sorties vidéo : 1xHDMI Femelle | 3xDP Femelle.
+                    - Nombre d'écran : 4.
+                    - Connecteur alimentation : 1xPCI Express 8 Broches.
+                    - Type de refroidissement : Actif (fansink).
+                    - Consommation : 200 W.
+                    - Format : Dual Slot.
+                    - Nombre de slots PCI : 2.
+                    - Longueur : 222.1 mm.
+                    - Largeur : 115.6 mm.
+                    - Epaisseur : 38.2 mm.
+                    - Utilisation : Gamer NVIDIA RTX.
+                </p>
+                <p class="price">Price: <strong>1 499,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('GEFORCE-RTX-3060', '1 499,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

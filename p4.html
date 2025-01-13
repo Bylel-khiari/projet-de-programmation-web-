@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pc de Bureau</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go.jpg">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go (3).jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go (3).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go (1).jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go (1).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go (2).jpg" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp4/pc-de-bureau-gamer-storm-i5-12400f-rtx-4060-ventus-2x-black-8g-16-go (2).jpg')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1> Pc de Bureau </h1>
+                <p class="description">
+                    Boitier Gamer ARKTEK G13 - Processeur Intel Core i5-12400F 12e Génération, 2.5 GHz up to 4.4 GHz, 18 Mo de mémoire cache - RAM 16 Go (1x 6 Go) TeamGroup DDR4 3200 Mhz - Disque SSD 512 Go Patriot P220 2.5" SATA III - Carte Graphique MSI GeForce RTX 4060 VENTUS 2X BLACK, 8 Go de mémoire GDDR6 dédiée - Carte mère ASRock H610M-HDV/M.2 - Boite d'alimentation MSI MAG A500DN / 500W ATX / 80 PLUS Standard - Garantie 1 an
+                </p>
+                <p class="price">Price: <strong>5 499,000  DT</strong></p>
+                <button class="achat" onclick="addToCart('Asus ROG Strix', '7 199,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

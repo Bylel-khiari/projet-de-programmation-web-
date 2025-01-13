@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tapis Spirit of gamer SOG PAD01XXR</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (4).jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (4).jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (4).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (3).jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (3).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (2).jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (2).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (1).jpg" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp32/tapis-souris-gaming-spirit-of-gamer-xxl-rouge (1).jpg')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Tapis Spirit of gamer SOG PAD01XXR</h1>
+                <p class="description">
+                    Tapis Souris Gaming Spirit of Gamer - Taille XXL - Texture Ultrafine - Base Caoutchoutée antidérapante - Épaisseur 5 mm - Dimensions: 30 x 78 cm - Poids: 640 g - Couleur: Rouge Victory
+                </p>
+                <p class="price">Price: <strong>50,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Tapis Spirit of gamer SOG PAD01XXR', '50,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+</script>
+</html>

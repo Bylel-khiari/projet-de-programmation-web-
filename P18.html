@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Refroidisseur INCA INC-321RX Pour PC Portable - Noir</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo"> 
+                    <img id="featured-image" src="/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX.png "alt = "Featured Product" >
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX.png" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX.png ')">
+                    <img class="thumbnail" src="/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX-3.png" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX-3.png')"> 
+                    <img class="thumbnail" src="/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX-2.png" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX-2.png')">
+                    <img class="thumbnail" src="/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX-1.png" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp18/REFROIDISSEUR-PC-PORTABLE-INCA-INC-321RX-1.png')">
+
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Refroidisseur INCA INC-321RX Pour PC Portable - Noir</h1>
+                <p class="description">
+                    Refroidisseur Pc Portable Inca Inc-321rx
+-Design Unique
+-Des Matériaux De Première Classe Et Un Mécanisme Unique
+-Niveau Sonore : 23 Dba
+-Bouton Marche/arrêt
+-Ventilateur : 140×2 Mm Avec Flux D’air Puissant
+-Dissipation Thermique À Haute Performance
+-Conception Antidérapante Unique
+-Dimensions : Hors Tout 400x305x30 Mm
+-Taille Ventilateur : 140x140x15 Mm
+-Poids Net : 817 G
+-La Tension Nominale De 5 V Dc
+-Actuel 0,38
+-Vitesse Du Ventilateur : 1000 Tr/min
+-Le Débit D’air Maximum De 70 Cfm
+-Emballage Inclus : Cable Usb   
+                </p>
+                <p class="price">Price: <strong>39,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Refroidisseur INCA INC-321RX Pour PC Portable - Noir', '39,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

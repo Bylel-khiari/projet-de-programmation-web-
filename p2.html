@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pc-portable-hp</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir (1).jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir (1).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir (2).jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir (2).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir (3).jpg" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp2/pc-portable-hp-15-fd0297nk-n100-8-go-256-go-ssd-noir (3).jpg')">
+                   
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>pc-portable-hp</h1>
+                <p class="description">
+                    Écran 15.6" HD (1366 x 768), antireflet - Processeur Intel Celeron N100 , (jusqu'à 3.4 GHz, 6 Mo de mémoire cache) - Mémoire 8 Go DDR4 - Disque SSD M.2 NVMe 256 Go - Carte graphique Intel UHD Graohics Intégrée - Wi-Fi 6 - Bluetooth 5.3 - Caméra HP True Vision HD 720p - Doubles haut-parleurs - 1x USB Type-C - 2x USB Type-A - 1x HDMI 1.4b - 1x combinée casque/microphone - FreeDOS - Couleur Noir - Garantie 1 an
+                </p>
+                <p class="price">Price: <strong>399,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('pc-portable-hp', '399,000 DT ')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

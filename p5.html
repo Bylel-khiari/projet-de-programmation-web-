@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECRAN GAMER 1800 R</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp5/71ZtIBf2cHL._AC_SX679_.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp5/71ZtIBf2cHL._AC_SX679_.jpg " alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp5/71ZtIBf2cHL._AC_SX679_.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp5/51hfavpTt4L._AC_SX679_.jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp5/51hfavpTt4L._AC_SX679_.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp5/71zADKroJvL._AC_SX679_.jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp5/71zADKroJvL._AC_SX679_.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp5/41lJwlfVzpL._AC_SX679_.jpg" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp5/41lJwlfVzpL._AC_SX679_.jpg')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>ECRAN GAMER 1800 R</h1>
+                <p class="description">
+                    Résolution 2K Ultra HD + Surface 1800R; La résolution du ecran pc gamer WQHD 2560*1440 rend les détails du jeu plus clairs et rend la conception du motif plus parfaite. La ecran pc incurvé du 1800R vous donne une sensation visuelle choquante d'encerclement, offrant un aspect et une sensation cinématographiques sur place
+                    Taux de rafraîchissement de 144 Hz + temps de réponse de 1 ms; Taux de rafraîchissement de 144 Hz, dites adieu au décalage et au flou de mouvement et soulagez la fatigue oculaire. Temps de réponse de seulement 1 ms, plus rapide que le temps de réponse normal du panneau IPS, le même temps de réponse que le panneau TN, adapté aux sports électroniques professionnels
+                    Technologie Adaptive sync + Mode Jeu; Adaptive sync peut synchroniser le taux de rafraîchissement du ecran pc avec l'ordinateur de bureau ou l'ordinateur portable et résoudre les problèmes de déchirure, de bégaiement et de décalage de l'écran de jeu causés par la synchronisation verticale et le faible taux de rafraîchissement (Compatible avec adaptive sync, Synchro adaptative). Les modes de jeu incluent les fonctions RTS, FPS, réticule et minuterie
+                    Une variété d'interfaces + boutons à bascule; Équipé de plusieurs interfaces, HDMI + HDMI + Displayport, prend en charge la connexion à XBOX, PS, Pc portable gamer et autres appareils, vous permettant de profiter de plus de XBOX, PS et d'autres jeux de nouvelle génération. L'écran n'a qu'un seul bouton à bascule multifonction qui peut allumer/éteindre, confirmer et revenir, sélectionner gauche et droite et augmenter ou diminuer le volume
+                    Qualité d'image 85 % DCI-P3 + angle de vision large de 178 degrés; Jusqu'à 85 % de couverture des couleurs DCI-P3, des couleurs plus riches et des transitions plus douces entre les tons, vous pouvez profiter d'effets spéciaux et d'une qualité d'image à la maison. Le grand angle de vue de 178 degrés vous permet de voir des images époustouflantes sous tous les angles
+                </p>
+                <p class="price">Price: <strong>929,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('ECRAN GAMER 1800 R', '929,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

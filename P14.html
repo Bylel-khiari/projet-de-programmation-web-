@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pc portable HP Pavilion Gaming 15-dk0017nk / i5 9è Gén / 8 Go + SIM Orange Offerte 60 Go</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go.jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go (3).jpg" alt="Gallery 2" onclick="updateImage('/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go (3).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go (1).jpg" alt="Gallery 3" onclick="updateImage('/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go (1).jpg')">
+                    <img class="thumbnail" src="/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go (2).jpg" alt="Gallery 4" onclick="updateImage('/projet e comerce/imgp14/pc-portable-hp-pavilion-gaming-15-dk0017nk-i5-9e-gen-8-go-sim-orange-offerte-30-go (2).jpg')">
+                    
+                    
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Pc portable HP Pavilion Gaming 15-dk0017nk / i5 9è Gén / 8 Go + SIM Orange Offerte 60 Go</h1>
+                <p class="description">
+                    Écran 15.6" Full HD IPS - Processeur Intel Core i5-9300H, up to 4.1 Ghz, 8 Mo de cache - Mémoire 8 Go - Disque 512 Go SSD M.2 - Carte graphique Nvidia GeForce GTX 1650, 4 Go de mémoire GDDR5 dédiée - Clavier rétroéclairé - Wifi - Bluetooth - USB 3.1 Type C - 3x USB 3.1 - HDMI - RJ45 - Windows 10 - Garantie 1 an + SIM Orange Offerte 60 Go
+                </p>
+                <p class="price">Price: <strong>2 239,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Pc portable HP Pavilion Gaming 15-dk0017nk / i5 9è Gén / 8 Go + SIM Orange Offerte 60 Go', '2 239,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

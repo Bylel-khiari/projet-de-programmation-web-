@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asus ROG Strix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer"> 
+    <link rel="stylesheet" href="produit.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+             <h1> GAMING - ZONE </h1>
+        </div>
+        <ul class="menu">
+            <li><a href="project.html" class="active">Accueil</a></li>
+            <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+            <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+        </ul>
+    </nav>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (2).jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (2).jpg" alt="Gallery 1" onclick="updateImage('/img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (1).jpg')">
+                    <img class="thumbnail" src="/img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (3).jpg" alt="Gallery 2" onclick="updateImage('/img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (3).jpg')">
+                    <img class="thumbnail" src="/img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (4).jpg" alt="Gallery 3" onclick="updateImage('img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (4).jpg')">
+                    <img class="thumbnail" src="/img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (5).jpg" alt="Gallery 4" onclick="updateImage('img p1/pc-portable-gamer-asus-rog-strix-g16-g614-i9-14900hx-rtx-4060-8g-32-go-ddr5-2-to-ssd-windows-11-noir (5).jpg')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Asus ROG Strix</h1>
+                <p class="description">
+                    Écran ROG Nebula Display 16" QHD+ (2560 x 1600, WQXGA), anti-reflet, 240Hz, G-Sync, HDR - Processeur Intel Core i9-14900HX 14e génération, (jusqu’à 5.8 GHz, 36 Mo de mémoire cache) - Mémoire 32 Go (2 x 16 Go) DDR5-5600 - Disque SSD M.2 NVMe 2 To - Carte graphique NVIDIA GeForce RTX 4060, 8 Go de mémoire GDDR6 dédiée - 1x 3.5mm Combo Audio Jack - 1x HDMI 2.1 - 2x USB 3.2 - 1x USB 3.2 Type-C - 1x Port LAN RJ45 - 1x Thunderbolt 4 - Clavier chiclet avec rétroéclairage RGB individuel des touches (Pavé tactile, Prise en charge du pavé numérique) - Caméra HD 720P - 2x Haut-parleur 1W avec technologie Smart Amp - Wi-Fi 6E - Bluetooth 5.3 - Éclairage RGB (Barre lumineuse Aura Sync) - Windows 11 - Couleur Noir - Garantie 2 ans
+                </p>
+                <p class="price">Price: <strong>7 199,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Asus ROG Strix', '7 199,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FULL SETUP V5</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>  
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp33/full-setup-v5-tunisie.webp" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp33/full-setup-v5-tunisie.webp" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp33/full-setup-v5-tunisie.webp')">
+                
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>FULL SETUP V5</h1>
+                <p class="description">
+                    FULL SETUP V5
+
+                    
+                    
+                    Processeur : Intel Core i5 11400F| 2.6 Ghz jusqu'à 4.4Ghz | 12 Mo de mémoire cache
+                    Carte mère : MSI B560M-A PRO
+                    Carte graphique : MSI GTX1660 SUPER VENTUS XS OC | 6 Go de mémoire GDDR6
+                    Barrette Mémoire : GOODRAM DDR4 3200MHZ 8GO IRDM X
+                    Disque Dur : SSD SPATIUM M390 M2 500G
+                    Boitier : MSI MAG FORGE 100M avec 3 Ventilateurs (x2 RGB)
+                    Alimentation : MSI MAG A550BN/ 550W ATX / 80PLUS Bronze
+                    Ecran : LENOVO C27-30 27" FHD 75 Hz | 1920 x 1080 pixel
+                    Chaise : Pilote Gaming Avec Borderie Rouge 
+                    Pack Clavier Souris : MSI VIGOR GK30 Noir | RGB dans 6 zones
+                    Casque : VARR RGBVH8010 Stéréo lite 3,5MM USB | 150MV
+                    Garantie : 1 an
+                </p>
+                <p class="price">Price: <strong>3 599,000TND</strong></p>
+                <button class="achat" onclick="addToCart('FULL SETUP V5', '3 599,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+          <link rel="stylesheet" href="Mon Compte.css"> 
+    <title>BOUTIQUE E-SHOP</title>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+             <h1> GAMING - ZONE </h1>
+        </div>
+        <ul class="menu">
+            <li><a href="project.html" class="active">Accueil</a></li>
+            <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+            <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3> Mon Compte </h3>
+            </div>
+            <div class="card-body">
+                <form action="">
+                    <div class="form-group">
+                        <label for="nom"> Nom </label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre Nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom"> Prénom </label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email"> Email </label>
+                        <input type="email" id="email" name="email" placeholder="Votre Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"> Mot de Passe </label>
+                        <input type="password" id="password" name="password" placeholder="Votre Mot de Passe">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"> Confirmer Mot de Passe </label>
+                        <input type="password" id="password" name="password" placeholder="Confirmer Mot de Passe">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit"> Enregistrer </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const nom = document.getElementById("nom");
+        const prenom = document.getElementById("prenom");
+        const email = document.getElementById("email");
+        const password = document.querySelectorAll("input[type='password']")[0];
+        const confirmPassword = document.querySelectorAll("input[type='password']")[1];
+
+        form.addEventListener("submit", function (event) {
+            // Empêche l'envoi du formulaire par défaut
+            event.preventDefault();
+
+            // Validation des champs
+            if (!nom.value.trim() || !prenom.value.trim() || !email.value.trim() || !password.value || !confirmPassword.value) {
+                alert("Tous les champs doivent être remplis.");
+                return;
+            }
+
+            // Validation de l'adresse email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value)) {
+                alert("Veuillez entrer une adresse email valide.");
+                return;
+            }
+
+            // Vérification des mots de passe
+            if (password.value !== confirmPassword.value) {
+                alert("Les mots de passe ne correspondent pas.");
+                return;
+            }
+
+            // Si tout est valide, soumission du formulaire
+            alert("Formulaire soumis avec succès !");
+            form.submit();
+        });
+    });
+</script>
+
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Setup Gamer MSI Pc de Bureau Gaming / i7-12700 / RTX 4060 8G / 32 Go Avec Écran Incurvé MSI 24" Full HD VA 180 Hz</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+              integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer"> 
+             <link rel="stylesheet" href="produit.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                 <h1> GAMING - ZONE </h1>
+            </div>
+            <ul class="menu">
+                <li><a href="project.html" class="active">Accueil</a></li>
+                <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+                <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="product-section">
+        <div class="product-wrapper">
+            <div class="image-gallery">
+                <div class="main-photo">
+                    <img id="featured-image" src="/projet e comerce/imgp19/setup-gamer-msi-pc-de-bureau-gaming-i7-12700-rtx-4060-8g-32-go-avec-ecran-incurve-msi-24-full-hd-va-180-hz.jpg" alt="Featured Product">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail" src="/projet e comerce/imgp19/setup-gamer-msi-pc-de-bureau-gaming-i7-12700-rtx-4060-8g-32-go-avec-ecran-incurve-msi-24-full-hd-va-180-hz.jpg" alt="Gallery 1" onclick="updateImage('/projet e comerce/imgp19/setup-gamer-msi-pc-de-bureau-gaming-i7-12700-rtx-4060-8g-32-go-avec-ecran-incurve-msi-24-full-hd-va-180-hz.jpg')">
+                
+
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Setup Gamer MSI Pc de Bureau Gaming / i7-12700 / RTX 4060 8G / 32 Go Avec Écran Incurvé MSI 24" Full HD VA 180 Hz</h1>
+                <p class="description">
+                    Écran Gaming Incurvé MSI G24C4 E2 23.6" Full HD VA / 180 Hz-  Boîtier Gamer MSI MAG FORGE M100A Avec Boîte d'alimentation MSI PSU 600W 80+ Standard - Processeur Intel Core i7-12700 12e génération, (jusqu'à 4.9 GHz, 25 Mo de mémoire cache) - RAM 32 Go (2x 16 Go) DDR4 RGB - Disque SSD 2.5" SATA 500 Go - Carte graphique MSI GEFORCE RTX 4060 GAMING X, 8 Go de mémoire GDDR6 dédiée - Carte mére MSI PRO H610M-E DDR4 - Kit de Watercooling pour processeur MSI MAG CORELIQUID 240R V2 / ARGB - Souris USB Gaming Asus ROG Strix Impact II / RGB - Clavier Gaming Xtrike Me KB-280 / RGB / Noir - Garantie 1 an
+                </p>
+                <p class="price">Price: <strong>3 699,000 DT</strong></p>
+                <button class="achat" onclick="addToCart('Setup Gamer MSI Pc de Bureau Gaming / i7-12700 / RTX 4060 8G / 32 Go Avec Écran Incurvé MSI 24 Full HD VA 180 Hz', '3 699,000 DT')">ACHETER</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function updateImage(src) {
+            document.getElementById("featured-image").src = src;
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier');
+        }
+    </script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>BOUTIQUE E-SHOP</title>
+    <link rel="stylesheet" href="Panier.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+             <h1> GAMING - ZONE </h1>
+        </div>
+        <ul class="menu">
+            <li><a href="project.html" class="active">Accueil</a></li>
+            <li><a href="Mon Compte.html"><i class="fa-solid fa-user"></i> Mon Compte </a></li>
+            <li><a href="Panier.html"><i class="fa-solid fa-cart-shopping"></i> Panier</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="cart-items">
+            <h2>Articles dans votre panier</h2>
+            <div id="cart-items-container"></div>
+        </section>
+        <section class="cart-summary">
+            <h2>Résumé du panier</h2>
+            <p>Total: <span id="total-price">0 DT</span></p>
+            <button id="checkout-button">Passer à la caisse</button>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                        <p>Prix: <span class="price">${item.price}</span></p>
+                        <button class="remove-button">Supprimer</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+
+                const price = parseFloat(item.price.replace(' DT', '').replace(',', ''));
+                totalPrice += price;
+            });
+
+            document.getElementById('total-price').innerText = totalPrice.toFixed(3) + ' DT';
+
+            document.querySelectorAll('.remove-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const cartItem = button.closest('.cart-item');
+                    const itemName = cartItem.querySelector('h3').innerText;
+                    removeFromCart(itemName);
+                    cartItem.remove();
+                    updateTotalPrice();
+                });
+            });
+
+            function removeFromCart(productName) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart = cart.filter(item => item.name !== productName);
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            function updateTotalPrice() {
+                let total = 0;
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    const price = parseFloat(item.querySelector('.price').innerText.replace(' DT', '').replace(',', ''));
+                    total += price;
+                });
+                document.getElementById('total-price').innerText = total.toFixed(3) + ' DT';
+            }
+        });
+    </script>
+</body>
+</html>
